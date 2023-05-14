@@ -11,7 +11,7 @@ data class Customer(
     @Column(nullable = false)
     var lastName: String = "",
     @Column(nullable = false, unique = true)
-    val cpf: String = "",
+    var cpf: String = "",
     @Column(nullable = false)
     var income: BigDecimal = BigDecimal.ZERO,
     @Column(nullable = false, unique = true)
@@ -30,5 +30,5 @@ data class Customer(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    var id: Long? = null
 )
